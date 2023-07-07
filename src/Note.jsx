@@ -4,9 +4,10 @@ function Note(props){
         <div className="note">
             <h1>{props.title}</h1>
             <p>{props.content}</p>
+            <button onClick={()=>{props.deleteItem(props.id)}}>DELETE</button>
         </div>
     )
 }
 
 export default Note
-Note.propTypes = { title: PropTypes.string, content: PropTypes.string };
+Note.propTypes = { title: PropTypes.string, content: PropTypes.string, deleteItem: PropTypes, id: PropTypes.string };
